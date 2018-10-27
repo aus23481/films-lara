@@ -26,7 +26,8 @@ Photo
 
 2.2) add redirect from / to /films/
 
-2.3) implement frontend page /films/film-slug-name to show specific film. URL should have film's slug.
+2.3) implement frontend page /films/film-slug-name to show specific film. 
+URL should have film's slug.
 
 2.4) implement frontend page /films/create with form to create new film. 
 
