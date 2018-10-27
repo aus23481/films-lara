@@ -154,5 +154,14 @@ class FilmController extends Controller
 
     }
 
+    public function redirectToFilm($name) {
+
+        $data["films"] =  Film::with("country")->with("genre")->where("name", $name)->paginate(1, ['*'], 'film');
+        $data["countries"] = Country::all();
+        $data["genres"] = Genre::all();
+        return view('film', $data);
+        
+    }
+
 
 }

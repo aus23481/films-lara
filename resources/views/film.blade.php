@@ -28,7 +28,7 @@
                                 <img src="{{$film->photo}}" class="media-object" style="width:60px">
                                 </div>
                                 <div class="media-body">
-                                <input type="text" name="film_id" id="film_id" value="{{$film->id}}">
+                                <input type="hidden" name="film_id" id="film_id" value="{{$film->id}}">
                                   <h4 class="media-heading">{{$film->name}}</h4>
                                   <p>{{$film->description}}</p>
 
@@ -103,7 +103,7 @@
              
 
                     <div class="form-group">                            
-                            <b>Name</b>
+                            <b>Name (Also film's slug)</b>
                             <input class="form-control" type="text" required id="name" name="name" placeholder="Number here... ">
                     </div>
                     
@@ -121,7 +121,7 @@
 
                     <div class="form-group">                            
                             <b>Rating</b>
-                            <input class="form-control" type="range" min="1" max="10" value="6" required id="rating" name="rating" >
+                            <input class="form-control" type="range" min="1" max="5" value="5" required id="rating" name="rating" >
                     </div>
 
                     <div class="form-group">                            
