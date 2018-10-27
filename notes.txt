@@ -1,0 +1,16 @@
+Setup::
+#1. config database  accordingly
+#2. run php artisan migrate
+#3. php artisan db:seed
+
+#Code to review::
+1.Php:Film Manage code lies in FilmController
+2.JS:public/js/film.js
+
+#Features
+1. Films List with Pagination
+2. Add Film with Modal and Ajax call with REST API
+3. Ajax loading for Comments With API 
+4. Add Comments with API
+5. Code Exception and authentication handled
+
