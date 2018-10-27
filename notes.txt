@@ -16,4 +16,5 @@ Setup::
 6. DB relationship maintained.
 7. Unit tested
 8. Code commented and SOLID, DRY principles maintained
+9. MVC rules followed
 
