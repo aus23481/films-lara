@@ -12,5 +12,8 @@ Setup::
 2. Add Film with Modal and Ajax call with REST API
 3. Ajax loading for Comments With API 
 4. Add Comments with API
-5. Code Exception and authentication handled
+5. Code Exception and authentication handled. 
+6. DB relationship maintained.
+7. Unit tested
+8. Code commented and SOLID, DRY principles maintained
 

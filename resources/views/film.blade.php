@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="media-body">
                                 <input type="hidden" name="film_id" id="film_id" value="{{$film->id}}">
-                                  <h4 class="media-heading">{{$film->name}}</h4>
+                                <h4 class="media-heading"><a href="/film/{{$film->name}}" target="_BLANK">{{$film->name}}</a></h4>
                                   <p>{{$film->description}}</p>
 
                                   <h4 class="media-heading">Release Date:{{date("Y-m-d",strtotime($film->release_date))}}</h4>
