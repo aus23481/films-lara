@@ -20,9 +20,3 @@ const app = new Vue({
     el: '#app'
 });
 */
-
-function addFilm() {
-
-    var data = $("#form_add_film").serialize();
-    alert(data);
-}

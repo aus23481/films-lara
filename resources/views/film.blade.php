@@ -28,6 +28,7 @@
                                 <img src="{{$film->photo}}" class="media-object" style="width:60px">
                                 </div>
                                 <div class="media-body">
+                                <input type="text" name="film_id" id="film_id" value="{{$film->id}}">
                                   <h4 class="media-heading">{{$film->name}}</h4>
                                   <p>{{$film->description}}</p>
 
@@ -48,6 +49,38 @@
     
 
                         <div class="text-right"> {{ $films->links() }} </div> 
+
+
+                      
+                         
+
+                        <div class="panel panel-default">
+                                <div class="panel-heading">Comments</div>
+                                <div class="panel-body">
+
+                                    @if (Auth::check())
+                                        <div class="form-control">
+                                       
+                                            <textarea class="form-control" name="comment" id="comment"></textarea>
+                              
+                                        </div>
+                                        <div class="form-control">
+                                                <button id="btn_comment" onclick="addComment()" class="btn btn-primary">Comment</button>
+
+                                        </div>
+                                    @endif
+
+                                    <br><br>
+
+                                    <div id="div_comments">
+                                        No comments
+                                    </div>
+
+                                </div>
+                        </div>       
+
+
+
 
             </div>
         </div>
@@ -107,7 +140,7 @@
 
                     <div class="form-group">                            
                             <b>Genre</b>
-                            <select class="form-control"  required id="country_id" name="country_id" >
+                            <select class="form-control"  required id="genre_id" name="genre_id" >
                             @foreach($genres as $genre)
                             <option value="{{$genre->id}}">{{$genre->name}}</option>
                             @endforeach
@@ -116,7 +149,7 @@
 
                     <div class="form-group">                            
                             <b>Photo (Online URL)</b>
-                            <input class="form-control" type="text" required id="photo" name="photo" >
+                            <input value="https://www.gstatic.com/webp/gallery3/1.sm.png" class="form-control" type="text" required id="photo" name="photo" placeholder="https://www.gstatic.com/webp/gallery3/1.sm.png" >
                             
                     </div>
 
@@ -126,7 +159,7 @@
 
             </div>
             <div class="modal-footer">
-                    <button type="button" onclick="addFilm()" class="btn btn-default" >Add Film</button>
+                    <button id="btn_add_film" type="button" onclick="addFilm()" class="btn btn-default" >Add Film</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </div>
